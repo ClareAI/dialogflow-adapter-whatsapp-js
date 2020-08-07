@@ -1,0 +1,17 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wati.io/dialogflow-adapter-whatsapp": "^1.0.0",
+    "dotenv": "^8.2.0",
+    "restify": "^8.5.1"
+  }
+}

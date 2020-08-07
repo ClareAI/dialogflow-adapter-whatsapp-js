@@ -19,7 +19,8 @@ bot for connect to the Whatsapp channel and get the response from Dialogflow.
     ```
     npm install @wati.io/dialogflow-adapter-whatsapp
     ```
-- get the Dialogflow token from google cloud 
+- get the Dialogflow token from google cloud (go the [Google Cloud Platform](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com) 
+                                              to enable the Dialogflow API and downland the API token JSON file)
 
 - save the token json file to root directory
 
