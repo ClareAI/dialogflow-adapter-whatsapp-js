@@ -8,7 +8,7 @@ const languageCode = 'en';
 process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\\xxxxxxxxx\\NewAgent-xxxxxxx.json";
 
 const assert = require('assert');
-const WsDialogflowAdapter = require('../src/index');
+const WsDialogflowAdapter = require('@wati.io/dialogflow-adapter-whatsapp');
 
 class MockRequest {
     constructor(body, headers) {
