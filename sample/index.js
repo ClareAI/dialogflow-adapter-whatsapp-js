@@ -24,10 +24,9 @@ const wsDialogflowAdapter = new WsDialogflowAdapter({
     languageCode: process.env.languageCode
 });
 
-// Create the main dialog.
 const bot = new DialogflowBot();
 
-// Listen for incoming request from Twilio
+// Listen for incoming request
 server.post('/api/whatsapp/messages', (req, res) => {
     console.log("getting message");
     wsDialogflowAdapter.processActivity(req, res).then(async (context) => {
