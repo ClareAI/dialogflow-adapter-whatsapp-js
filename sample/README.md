@@ -14,7 +14,7 @@ This is a chatbot that using the `ClareAI Dialogflow WhatsApp Adapter` library, 
 - go the [Google Cloud Platform](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com) 
 to enable the Dialogflow API and downland the API token JSON file
 
-- fill in the following message
+- fill in the following message in .env file
   ```
   projectId=xxxxx //your Dialogflow projectId
   sessionId=123456 // session of this conversation, e.g. 123456
