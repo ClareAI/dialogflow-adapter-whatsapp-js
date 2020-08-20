@@ -13,9 +13,7 @@ This is a chatbot that using the `ClareAI Dialogflow WhatsApp Adapter` library, 
 
 - WhatsApp Business API for Developers https://developers.facebook.com/docs/whatsapp/
 
-Apply through WhatsApp Solution Partner
-
-https://wati.io
+Apply through WhatsApp Solution Partner e.g. [WATI.io](https://wati.io)
 
 - go the [Google Cloud Platform](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com) 
 to enable the Dialogflow API and downland the API token JSON file
