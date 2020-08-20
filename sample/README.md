@@ -1,4 +1,4 @@
-# sample chatbot of (ClareAI Dialogflow WhatsApp Adapter)
+# sample chatbot of (WATI.io Dialogflow WhatsApp Adapter)
 
 This is a chatbot that using the `ClareAI Dialogflow WhatsApp Adapter` library, it can connect to Dialogflow with the Whatsapp channel.
 
@@ -10,7 +10,13 @@ This is a chatbot that using the `ClareAI Dialogflow WhatsApp Adapter` library, 
   ```bash
     node --version
   ```
-  
+
+- WhatsApp Business API for Developers https://developers.facebook.com/docs/whatsapp/
+
+Apply through WhatsApp Solution Partner
+
+https://wati.io
+
 - go the [Google Cloud Platform](https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com) 
 to enable the Dialogflow API and downland the API token JSON file
 
