@@ -1,4 +1,4 @@
-# WATI.io Dialogflow WhatsApp Adapter (beta)
+# WATI.io Dialogflow WhatsApp Adapter
 
 This Dialogflow WhatsApp adapter allows you to add an additional endpoint to your 
 bot for connect to the Whatsapp channel and get the response from Dialogflow. 
@@ -16,9 +16,7 @@ bot for connect to the Whatsapp channel and get the response from Dialogflow.
 - WhatsApp Business API for Developers
 https://developers.facebook.com/docs/whatsapp/
 
-Apply through WhatsApp Solution Partner
-
-https://wati.io
+Apply through WhatsApp Solution Partner e.g. [WATI.io](https://wati.io)
 
 ## Installation
 
