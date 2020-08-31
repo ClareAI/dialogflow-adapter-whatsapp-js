@@ -45,7 +45,8 @@ const WhatsAppAdapter = require('@wati.io/dialogflow-adapter-whatsapp');
 ```
 const wsAdapter = new WhatsAppAdapter({
     endpoint: 'https://whatsapp-apixxxxxx',// whatsapp endpoint
-    password: 'Basic xxxxxxxxxxx', //Basic base64(username:password)
+    token: 'xxxxxxxxxxxx', //The token you get from /v1/users/login, it will be used by default
+    password: 'Basic xxxxxxxxxxx', //Basic base64(username:password) , it will be use to get the token from /v1/users/login, if you let `token` empty
     projectId: projectId, // your Dialogflow projectId
     sessionId: sessionId, // session of this conversation, e.g. 123456
     languageCode: languageCode //e.g. en, https://cloud.google.com/dialogflow/docs/reference/language
