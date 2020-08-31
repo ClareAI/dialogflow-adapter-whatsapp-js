@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wati.io/dialogflow-adapter-whatsapp": "^1.0.0",
+    "@wati.io/dialogflow-adapter-whatsapp": "^1.0.1",
     "dotenv": "^8.2.0",
     "restify": "^8.5.1"
   }

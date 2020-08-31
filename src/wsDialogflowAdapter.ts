@@ -9,6 +9,7 @@ class WsDialogflowAdapter {
         this.languageCode = settings.languageCode;
         this.endpoint = settings.endpoint;
         this.password = settings.password;
+        this.token = settings.token;
     }
 
     async getIntent(queries) {
@@ -27,10 +28,12 @@ class WsDialogflowAdapter {
             const request = await parseRequest(req);
             let endpoint = this.endpoint;
             let password = this.password;
+            let token = this.token;
             let to = request && request.from;
             let TurnContext = {
                 endpoint: endpoint,
                 password: password,
+                token: token,
                 to: to,
                 type: "Message"
             };
@@ -45,22 +48,22 @@ class WsDialogflowAdapter {
         return new Promise(async (resolve, reject) => {
             let endpoint = this.endpoint;
             let password = this.password;
-            await getToken(endpoint, password).then(async (token) => {
-                const instance = axios.create({
-                    baseURL: endpoint + "/v1/messages",
-                    timeout: 2000,
-                    headers: {'Authorization': "Bearer " + token, 'Content-Type': 'application/json'}
-                });
-                let params = {
-                    preview_url: false,
-                    recipient_type: "individual",
-                    to: this.to,
-                    type: "text",
-                    text: {body: context}
-                };
-                let result = await instance.post("", params);
-                resolve(result);
+            let token = this.token;
+            token = token || await getToken(endpoint, password);
+            const instance = axios.create({
+                baseURL: endpoint + "/v1/messages",
+                timeout: 2000,
+                headers: {'Authorization': "Bearer " + token, 'Content-Type': 'application/json'}
             });
+            let params = {
+                preview_url: false,
+                recipient_type: "individual",
+                to: this.to,
+                type: "text",
+                text: {body: context}
+            };
+            let result = await instance.post("", params);
+            resolve(result);
         });
 
     }

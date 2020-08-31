@@ -21,7 +21,8 @@ const wsDialogflowAdapter = new WsDialogflowAdapter({
     password: process.env.password,
     projectId: process.env.projectId,
     sessionId: process.env.sessionId,
-    languageCode: process.env.languageCode
+    languageCode: process.env.languageCode,
+    token: process.env.token
 });
 
 const bot = new DialogflowBot();

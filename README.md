@@ -32,7 +32,7 @@ Apply through WhatsApp Solution Partner e.g. [WATI.io](https://wati.io)
 - save the the path of the token file to env variable `GOOGLE_APPLICATION_CREDENTIALS` , 
 we suggest you use [dotenv](https://www.npmjs.com/package/dotenv) and save it to the .env file
 ```
-process.env.DBNAME = "C:\Users\user\xxx\xxx\xxx\NewAgent-xxxxx.json"
+process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\Users\user\xxx\xxx\xxx\NewAgent-xxxxx.json"
 ```
 
 ## Usage
@@ -60,7 +60,7 @@ server.post('/api/whatsapp/messages', (req, res) => {
 });
 
 // get the response of the Dialogflow
-await wsDialogflowAdapter.getIntent(queries).then(async (replyText) => {
+await wsAdapter.getIntent(queries).then(async (replyText) => {
      await context.sendActivity(replyText);
 });
 ```
