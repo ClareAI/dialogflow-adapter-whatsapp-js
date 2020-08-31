@@ -32,7 +32,7 @@ Apply through WhatsApp Solution Partner e.g. [WATI.io](https://wati.io)
 - save the the path of the token file to env variable `GOOGLE_APPLICATION_CREDENTIALS` , 
 we suggest you use [dotenv](https://www.npmjs.com/package/dotenv) and save it to the .env file
 ```
-process.env.DBNAME = "C:\Users\user\xxx\xxx\xxx\NewAgent-xxxxx.json"
+process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\Users\user\xxx\xxx\xxx\NewAgent-xxxxx.json"
 ```
 
 ## Usage
@@ -45,7 +45,8 @@ const WhatsAppAdapter = require('@wati.io/dialogflow-adapter-whatsapp');
 ```
 const wsAdapter = new WhatsAppAdapter({
     endpoint: 'https://whatsapp-apixxxxxx',// whatsapp endpoint
-    password: 'Basic xxxxxxxxxxx', //Basic base64(username:password)
+    token: 'xxxxxxxxxxxx', //The token you get from /v1/users/login, it will be used by default
+    password: 'Basic xxxxxxxxxxx', //Basic base64(username:password) , it will be use to get the token from /v1/users/login, if you let `token` empty
     projectId: projectId, // your Dialogflow projectId
     sessionId: sessionId, // session of this conversation, e.g. 123456
     languageCode: languageCode //e.g. en, https://cloud.google.com/dialogflow/docs/reference/language
@@ -60,7 +61,7 @@ server.post('/api/whatsapp/messages', (req, res) => {
 });
 
 // get the response of the Dialogflow
-await wsDialogflowAdapter.getIntent(queries).then(async (replyText) => {
+await wsAdapter.getIntent(queries).then(async (replyText) => {
      await context.sendActivity(replyText);
 });
 ```
